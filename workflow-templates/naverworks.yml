@@ -2,6 +2,7 @@ name: Naverworks bot notification
 
 on:
   push:
+    branches: [ $default-branch ]
   workflow_dispatch:
 
 jobs:
