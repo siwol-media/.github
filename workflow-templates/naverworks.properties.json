@@ -4,5 +4,10 @@
   "iconName": "notification",
   "categories": [
       "Automation", "utilities"
-  ]
+  ],
+  "filePatterns": [
+       "package.json$",
+       "^Dockerfile",
+       ".*\\.md$"
+   ]
 }
