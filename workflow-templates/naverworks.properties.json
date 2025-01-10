@@ -1,0 +1,8 @@
+{
+  "name": "Siwol Media Workflow",
+  "description": "Siwol Media Push Notification Workflow.",
+  "iconName": "notification",
+  "categories": [
+      "Automation", "utilities"
+  ]
+}

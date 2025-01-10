@@ -1,0 +1,22 @@
+name: Naverworks bot notification
+
+on:
+  push:
+  workflow_dispatch:
+
+jobs:
+  alert:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read   # 최소한 read 권한 필요
+    steps:
+      - name: Use Private Action
+        # private repo를 바로 uses
+        uses: siwol-media/naverworks-github-action@master
+        with:
+          private_key: ${{ secrets.NAVERWORKS_PRIVATE_KEY }}
+          client_id: ${{ secrets.NAVERWORKS_CLIENT_ID }}
+          client_secret: ${{ secrets.NAVERWORKS_CLIENT_SECRET }}
+          channel_id: ${{ secrets.NAVERWORKS_CHANNEL_ID }}
+          service_account: ${{ secrets.NAVERWORKS_SERVICE_ACCOUNT }}
+          bot_no: ${{ secrets.NAVERWORKS_BOT_NO }}
